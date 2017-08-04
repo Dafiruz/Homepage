@@ -1,0 +1,129 @@
+<html>
+	<head>
+		<link rel="shortcut icon" type="image/png" href="src/home.png"/>
+		<link rel='stylesheet' type="text/css" href='src/style.css' />
+		<title>Homepage</title>
+		<script>
+			function startTime(change) {
+			    var today = new Date();
+			    var h = today.getHours();
+			    var m = today.getMinutes();
+			    var s = today.getSeconds();
+			    h = checkTime(h);
+			    m = checkTime(m);
+			    s = checkTime(s);
+			    document.getElementById('clock').innerHTML =
+			    h + ":" + m + ":" + s;
+			    var t = setTimeout(startTime, 500);
+
+
+			    //wallpaper
+			    if(change == true) {
+                    var change = changeBG();
+                    change = false;
+			    }
+			}
+
+			function checkTime(i) {
+			    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+			    return i;
+			}
+
+			function changeBG() {
+				//generate a random number from min to max
+				var min = 1, max = 20;
+				var str1 = "src/bg", str2 = ".png"
+				var number = Math.floor(Math.random() * max) + min;
+				var path = str1.concat(number);
+				path = path.concat(str2);
+				document.body.background = path;
+			}
+        </script>
+	</head>
+	<body onload="startTime(true)">
+	    <div id="cont_a763d5659e40affc8e42ba76fa05ae50">
+	        <script type="text/javascript" async src="https://www.theweather.com/wid_loader/a763d5659e40affc8e42ba76fa05ae50"></script>
+	    </div>
+		<div id='main'>
+
+		<div id='one' class='link'>
+		<div class='title'><p class='name'>reddit</p></div>
+			<div class='right'>
+				<a href='https://www.reddit.com'>.com</a>
+				<!--<a href='https://www.reddit.com/r/warframe'>wf</a>
+				<a href='https://www.reddit.com/r/todayilearned/'>til</a>
+				<a href='https://www.reddit.com/r/programming/'>prog</a>
+				<a href='https://www.reddit.com/r/arduino'>ard</a>-->
+				<a href='https://www.reddit.com/r/askreddit'>ask</a>
+				<a href='https://www.reddit.com/r/indieheads'>indie</a>
+				<a href='https://www.reddit.com/r/portugal'>pt</a>
+				<a href='https://www.reddit.com/r/europe'>eu</a>
+				<a href='https://nt.reddit.com/r/worldnews/#www'>news</a> <!-- Trump Filter #www-->
+			</div>
+		</div>
+
+		<div id='two' class='link'>
+		<div class='title'><p class='name'>music</p></div>
+			<div class='right'>
+				<a href='https://boards.4chan.org/mu/'>/mu/</a>
+				<a href='https://www.last.fm/user/Dafiruz'>last.fm</a>
+				<a href='http://www.tapmusic.net/lastfm/'>5x5</a>
+				<a href='http://www.albumoftheyear.org/'>aoty</a>
+			</div>
+		</div>
+
+		<div id='three' class='link'>
+		<div class='title'><p class='name'>video</p></div>
+			<div class='right'>
+			    <a href='https://www.youtube.com/feed/subscriptions?flow=1'>yt</a>
+				<a href='http://www.imdb.com'>imdb</a>
+				<a href='http://www.pogdesign.co.uk/cat/profile'>tv</a>
+				<a href='http://kissanime.to/'>kissanime</a>
+				<a href='https://myanimelist.net/'>mal</a>
+			</div>
+		</div>
+
+		<div id='four' class='link'>
+			<div class='title'><p class='name'>other</p></div>
+			<div class='right'>
+				<a href='https://alternativeto.net/'>alt</a>
+			    <a href='http://www.kuantokusta.pt/'>kk</a>
+				<a href='https://twitter.com'>tw</a>
+				<a href='https://www.facebook.com/'>fb</a>
+				<!-- tools -->
+				<!--<a href='http://www.kuantokusta.pt/'>kk</a>-->
+				<!--<a href='https://deathsnacks.com/wf/index.html'>wfA</a>-->
+				<!--<a href='https://warframe.market/'>wfM</a>-->
+			</div>
+		</div>
+
+		<div id='five' class='link'>
+			<div class='title'><p class='name'>other</p></div>
+			<div class='right'>
+				<a href='https://alternativeto.net/'>alt</a>
+			    <a href='http://www.kuantokusta.pt/'>kk</a>
+				<a href='https://twitter.com'>tw</a>
+				<a href='https://www.facebook.com/'>fb</a>
+				<!-- tools -->
+				<!--<a href='http://www.kuantokusta.pt/'>kk</a>-->
+				<!--<a href='https://deathsnacks.com/wf/index.html'>wfA</a>-->
+				<!--<a href='https://warframe.market/'>wfM</a>-->
+			</div>
+		</div>
+
+		<div id='six' class='link'>
+		<div class='title'><p class='name'>school</p></div>
+			<div class='right'>
+				<a href='https://ead.ipleiria.pt/2016-17/login/index.php'>ead</a>
+				<a href='https://outlook.office.com/owa/?realm=my.ipleiria.pt'>mail</a>
+				<a href='file:///C:\Users\...'>aval</a>
+				<a href='file:///C:\Users\...'>cal</a>
+				<a href='http://gisem.dei.estg.ipleiria.pt/horarios'>hor</a>
+			</div>
+		</div>
+	</div>
+
+	<div id='clock'></div>
+
+	</body>
+</html>
