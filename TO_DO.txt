@@ -1,2 +1,3 @@
 > more images
 > favourites button (opens 3 or more tabs at once)
+> add health tab
