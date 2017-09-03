@@ -14,7 +14,7 @@
 			    s = checkTime(s);
 			    document.getElementById('clock').innerHTML =
 			    h + ":" + m + ":" + s;
-			    var t = setTimeout(startTime, 500);
+			    var t = setTimeout(startTime, 250);
 
 
 			    //wallpaper
@@ -31,8 +31,8 @@
 
 			function changeBG() {
 				//generate a random number from min to max
-				var min = 1, max = 20;
-				var str1 = "src/bg", str2 = ".png"
+				var min = 1, max = 125;
+				var str1 = "src/images/bg", str2 = ".png"
 				var number = Math.floor(Math.random() * max) + min;
 				var path = str1.concat(number);
 				path = path.concat(str2);
