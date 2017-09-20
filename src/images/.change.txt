@@ -1,2 +1,4 @@
+Change:
 bg38.png
 bg42.png
+Reason: They don't fit properly on the page
